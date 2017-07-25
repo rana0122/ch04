@@ -1,9 +1,8 @@
-
 <!doctype html>
 <html lang="ko">
   <head>
-     <meta charset="utf-8">
-		 <title> 웹 폼</title>
+		<meta charset="utf-8">
+     <title> 웹 폼</title>
      <style>
 			 body {
 				background-color:#fff; 
@@ -14,6 +13,7 @@
 			 form legend{
 				font-size:15px;
 				font-weight:600; 
+				font-color:green;
 			 }
 			.reg {
 				font-size:14px;
@@ -38,25 +38,80 @@
     <legend>수강 신청인</legend>
     <ul>
     	<li>
-	    	<label class="reg" for="id">학번</label>
-        	<input type="text" id="id" autofocus> 
-        </li>
-        <li>       	
-	    	<label class="reg" for="name">이름</label>
+	    	<label>학번</label>
+       		<input type="text" id="id" autofocus>      	
+	    	<label>이름</label>
         	<input type="text" id="name">               
       </li>
     	<li>
-            <label class="reg" for="class">학과</label>
-            <select id="class">
-            	<option value="archi">건축공학과</option>
-                <option value="mechanic">기계공학과</option>
-                <option value="indust">산업공학과</option>
-                <option value="elec">전기전자공학과</option>
-            	<option value="computer" selected>컴퓨터공학과</option>
-                <option value="chemical">화학공학과</option>
-            </select>
+        <label>학과</label>
+				<select id="class">
+					<optgroup label="공과대학">
+						<option value="archi">건축공학과</option>
+						<option value="mechanic">기계공학과</option>
+						<option value="indust">산업공학과</option>
+						<option value="elec">전기전자공학과</option>
+						<option value="computer">컴퓨터공학과</option>
+						<option value="chemical">화학공학과</option>
+					</optgroup>
+					<optgroup label="인문대학">
+						<option value="history">사학과</option>
+						<option value="lang">어문학부</option>
+						<option value="philo">철학</option>
+					</optgroup>
+				</select>
       </li>
      </ul>
     </fieldset>
+    
+    <fieldset>
+			<legend>수강 과목을 선택하세요</legend>
+			<ul>
+				<li>
+					 <label class="reg" for="class">선호색상 </label> 
+					<input type="color" value="#00ff00">
+		 		</li>
+		 		<li>
+		 			 <label class="reg" for="class">신청과목(회화)</label>
+		 			<input type="radio" name="영어 회화(초급)" value="Basic">
+		 			<input type="radio" name="영어 회화(중급)" value="Intermidiate">
+		 			<input type="radio" name="영어 회화(고급)" value="Advanced">		
+		 		</li>
+		 		<li>
+		 			 <label class="reg" for="class">신청과목(자격)</label>
+		 			<input type="radio" name="TOEIC" value="toeic">
+		 			<input type="radio" name="TOFLE" value="tofle">
+		 			<input type="radio" name="OPIC" value="opic">		
+		 		</li>
+		 		<li>
+	    			<label class="reg" for="field">관심분야</label>
+     			   <input type="text" id="field"> 
+   			    </li>
+     		</ul>
+		</fieldset>
+		
+		<fieldset>
+		<legend>강의시간을 선택하세요</legend>
+		<ul>
+		<li>
+			<label class="reg" for="class">개강주</label>
+			<input type="week" id="startweek">
+		</li>
+		<li>
+			<label class="reg" for="class">강의시간</label>
+			<input type="time" id="classtime">
+		</li>
+		</ul>
+		</fieldset>
+		
+		<fieldset>
+		<legend>학생증 사본 업로드</legend>
+		<ul>
+		<li>학생증사본<input type="file"></li>
+		</ul>
+		</fieldset>
+
+		
   </form>
   </body>
+</html>
